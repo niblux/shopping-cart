@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# shopping-cart
+A Shopping Cart built in React 
 
-## Available Scripts
+I was asked to build a shopping cart for a technical test , given one day to complete it.
 
-In the project directory, you can run:
+The cart is working but my aim is to use this as a learning ground to keep adding up to date React features and implementing the latest standards and practices to further and hopefully help others with a similar task. 
 
-### `npm start`
+As each new feature is implemented, and the app gets a to a new version i will be creating seperate branches to show my progress whilst building the app and different stages it has gone through.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Installation
+Built using create-react-app simply clone and run yarn install, and you should be good to go.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Current Status
+- The basic Version 1.0 of this app has a table of products , which you can add to a cart.
+- The cart then calculates the total of items.
+- You can remove an item, and the total will update. (Same for adding an item)
+- There is a clear all button for removing all items.
 
-### `npm test`
+## Aims/Goals for this project 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Fix a known bug where the first item is set to 0 , this would be done by checking the state is being updating correctly.
+- [ ] Improve the UI layout 
+- [ ] Add real API request for Products Data
+- [ ] Re-Factor codebase primarily, checking wether any Stateful component data or logic can be moved into a Stateless Functional Component.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+..... More to come :)
