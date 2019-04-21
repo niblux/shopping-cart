@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Layout from './components/FullLayout'
+import TestComponent from './components/TestComponent';
 
 class App extends Component {
 
@@ -10,6 +11,7 @@ class App extends Component {
     this.state = {
       cartItems: [],
       cartTotal: 0,
+      productQuantity:1
     }
   }
 
@@ -20,11 +22,15 @@ class App extends Component {
   addToTotal() {
     let total = 0;
     let cartItems = this.state.cartItems;
+
     for (let i = 0; i < cartItems.length; i++) {
       total += cartItems[i].price * parseFloat(cartItems[i].quantity);
     }
     // 1.
-    this.setState({ cartTotal: `£${total}` })
+    // this.setState({ cartTotal: `£${total}` });
+    this.setState((prevState) => {
+      return { cartTotal: prevState.cartTotal = `£${total}` }
+    })
   }
 
   subtractFromTotal() {
@@ -34,16 +40,20 @@ class App extends Component {
       total -= cartItems[i].price * parseInt(cartItems[i].quantity);
     }
     // 2.
-    this.setState({ cartTotal: `£${Math.abs(total)}` })
+    // this.setState({ cartTotal: `£${Math.abs(total)}` })
+    this.setState((prevState) => {
+      return { cartTotal: prevState.cartTotal = `£${Math.abs(total)}` }
+    })
   }
 
   addCartItems = (items) => {
-    const cartItems = [...this.state.cartItems];
+    const cartItems = this.state.cartItems;
     let itemExists = false;
 
     cartItems.forEach(item => {
       if (item.id === items.id) {
         itemExists = true;
+        console.log("Item Quantity", item.quantity);
         item.quantity = item.quantity += 1;
       }
     })
@@ -55,10 +65,10 @@ class App extends Component {
     this.addToTotal(cartItems)
 
     // 3.
-    // this.setState(prevState => ({
-    //     cartItems:cartItems
-    // }), { cartItems })
-    this.setState({ cartItems });
+    this.setState((prevState) => {
+      return { cartItems: prevState.cartItems = cartItems }
+    })
+    // this.setState({ cartItems });
   }
 
   removeCartItems = (itemToRemove) => {
@@ -79,7 +89,10 @@ class App extends Component {
     this.subtractFromTotal(currentCart);
 
     // .4
-    this.setState({ cartItems: currentCart })
+    this.setState((prevState) => {
+      return {cartItems:prevState.cartItems = currentCart}
+    })
+    // this.setState({ cartItems: currentCart })
   }
 
   clearAll = () => {
