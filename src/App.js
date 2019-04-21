@@ -26,8 +26,7 @@ class App extends Component {
     for (let i = 0; i < cartItems.length; i++) {
       total += cartItems[i].price * parseFloat(cartItems[i].quantity);
     }
-    // 1.
-    // this.setState({ cartTotal: `£${total}` });
+
     this.setState((prevState) => {
       return { cartTotal: prevState.cartTotal = `£${total}` }
     })
@@ -39,8 +38,7 @@ class App extends Component {
     for (let i = 0; i < cartItems.length; i++) {
       total -= cartItems[i].price * parseInt(cartItems[i].quantity);
     }
-    // 2.
-    // this.setState({ cartTotal: `£${Math.abs(total)}` })
+
     this.setState((prevState) => {
       return { cartTotal: prevState.cartTotal = `£${Math.abs(total)}` }
     })
@@ -59,16 +57,15 @@ class App extends Component {
     })
 
     if (!itemExists) {
+      items.quantity = 1;
       cartItems.push(items);
     }
 
     this.addToTotal(cartItems)
 
-    // 3.
     this.setState((prevState) => {
       return { cartItems: prevState.cartItems = cartItems }
     })
-    // this.setState({ cartItems });
   }
 
   removeCartItems = (itemToRemove) => {
@@ -88,11 +85,9 @@ class App extends Component {
 
     this.subtractFromTotal(currentCart);
 
-    // .4
     this.setState((prevState) => {
       return {cartItems:prevState.cartItems = currentCart}
     })
-    // this.setState({ cartItems: currentCart })
   }
 
   clearAll = () => {
