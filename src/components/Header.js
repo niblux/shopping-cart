@@ -32,9 +32,9 @@ function ButtonAppBar(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" color="inherit" className={classes.grow}>
-                        MMT Shopping Cart
+                        Shopping Cart
           </Typography>
-                    <Button color="inherit">MMT</Button>
+                    <Button color="inherit">Nabil Elidrissi</Button>
                 </Toolbar>
             </AppBar>
         </div>
