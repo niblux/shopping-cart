@@ -14,12 +14,4 @@ Built using create-react-app simply clone and run yarn install, and you should b
 - You can remove an item, and the total will update. (Same for adding an item)
 - There is a clear all button for removing all items.
 
-## Aims/Goals for this project 
-
-- [ ] Fix a known bug where the first item is set to 0 , this would be done by checking the state is being updating correctly.
-- [ ] Improve the UI layout 
-- [ ] Add real API request for Products Data
-- [ ] Re-Factor codebase primarily, checking wether any Stateful component data or logic can be moved into a Stateless Functional Component.
-
-
 ..... More to come :)
