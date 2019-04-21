@@ -1,8 +1,6 @@
 # shopping-cart
 A Shopping Cart built in React 
 
-I was asked to build a shopping cart for a technical test , given one day to complete it.
-
 The cart is working but my aim is to use this as a learning ground to keep adding up to date React features and implementing the latest standards and practices to further and hopefully help others with a similar task. 
 
 As each new feature is implemented, and the app gets a to a new version i will be creating seperate branches to show my progress whilst building the app and different stages it has gone through.
