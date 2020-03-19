@@ -6,7 +6,7 @@ The cart is working but my aim is to use this as a learning ground to keep addin
 As each new feature is implemented, and the app gets a to a new version i will be creating seperate branches to show my progress whilst building the app and different stages it has gone through.
 
 # Installation
-Built using create-react-app simply clone and run yarn install, and you should be good to go.
+Built using create-react-app simply clone and run `yarn install`, and you should be good to go.
 
 ## Current Status
 - The basic Version 1.0 of this app has a table of products , which you can add to a cart.
